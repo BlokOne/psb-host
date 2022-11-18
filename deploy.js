@@ -3,7 +3,7 @@ const NAME = 'psb-host'; // repo name
 const repositoryUrl = `https://github.com/BlokOne/${NAME}`;
 
 
-ghpages.publish('dist', {
+ghpages.publish('public', {
    branch: 'gh-pages',
-   repo: repositoryUrl
+   repo: "https://github.com/BlokOne/psb-host"
 }, () => { console.log('Deploy is successful') });
