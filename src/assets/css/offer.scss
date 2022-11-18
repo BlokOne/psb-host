@@ -1,0 +1,238 @@
+.offer {
+
+   &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+
+   &__wrap {
+      position: relative;
+      background: #fff;
+      box-shadow: 0 0 29px 0 rgb(68 88 144 / 12%);
+      transition: all 0.3s ease-in-out;
+      border-radius: 8px;
+      z-index: 1;
+      margin-bottom: 48px;
+      width: 24%;
+      padding: 20px;
+      overflow: hidden;
+
+      @media (max-width:768px) and (min-width:320px) {
+         width: 98%;
+      }
+
+      @media (max-width:1024px) and (min-width:769px) {
+         width: 48%;
+      }
+   }
+
+   &__list-country {
+      margin-bottom: 50px;
+
+   }
+
+   &__countries {
+
+      li {
+         cursor: pointer;
+         position: relative;
+         border: 1px solid transparent;
+         padding: 10px;
+         border-radius: 5px;
+         padding-left: 40px;
+      }
+
+      display: flex;
+      justify-content: space-around;
+      font-size: 24px;
+      flex-wrap: wrap;
+
+      @media(max-width: 425px) {
+         flex-direction: column;
+
+         li {
+
+            margin-bottom: 5px;
+         }
+      }
+   }
+
+   &__country.active {
+      box-shadow: 0 0 0px 2px rgb(143 200 194);
+   }
+
+   &__list {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #4c4c4c;
+
+      li {
+         display: block;
+         padding: 10px;
+         font-weight: 400;
+         font-size: 14px;
+         text-align: center;
+         width: 100%;
+         margin: 0 auto;
+      }
+   }
+
+   &__list li:nth-child(2n-1) {
+      background-color: #f9f9f9;
+   }
+
+   &__list li:nth-last-child(1) {
+      margin-top: 10px;
+
+      a {
+         display: block;
+         height: 100%;
+         font-weight: 400;
+         font-size: 16px;
+         text-transform: uppercase;
+         color: #fff;
+         padding: 8px;
+         width: 100%;
+      }
+
+      border-radius: 5px;
+   }
+
+   &__title {
+      padding: 5px 10px;
+      position: relative;
+      font-size: 24px;
+      z-index: 10;
+      color: black;
+      font-family: poppins, sans-serif;
+      font-weight: 400;
+      text-align: center;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+         margin: 0;
+      }
+   }
+
+
+   &__price {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 20;
+      border-radius: 8px;
+      font-size: 32px;
+      line-height: 30px;
+      font-weight: 600;
+      padding: 5px;
+
+      p {
+         font-size: 30px;
+      }
+
+      sup {
+         top: -0.5em;
+         font-size: 24px;
+      }
+
+      div {
+         font-size: 12px;
+         font-weight: 400;
+         padding-left: 7px;
+         color: #1f1f1f;
+      }
+   }
+
+
+
+   // 
+
+   &__wrap.green &__price {
+      color: #79c8c2;
+      border: 1px solid #79c8c2;
+   }
+
+   &__wrap.green &__list li:nth-last-child(1) {
+      background-color: #79c8c2;
+      border-color: #79c8c2;
+   }
+
+   &__wrap.green:hover {
+      box-shadow: 0px 0px 0px 3px #79c8c2;
+   }
+
+   &__wrap.green &__title::after {
+      background-color: #79c8c2;
+
+   }
+
+   &__wrap.green &__title {
+      background-color: #79c8c2;
+   }
+
+   //
+
+
+}
+
+
+.ger::before {
+   content: url(../images/flag-germany.svg);
+   position: absolute;
+   top: 24%;
+   left: 10%;
+
+   @media (max-width: 425px) {
+      left: 4%;
+   }
+}
+
+.bul::before {
+   content: url(../images/flag-bulgaria.svg);
+   position: absolute;
+   top: 24%;
+   left: 9%;
+
+   @media (max-width: 425px) {
+      left: 4%;
+   }
+}
+
+.hol::before {
+   content: url(../images/flag-netherlands.svg);
+   position: absolute;
+   top: 24%;
+   left: 9%;
+
+   @media (max-width: 425px) {
+      left: 4%;
+   }
+}
+
+.mal::before {
+   content: url(../images/flag-malaysia.svg);
+   position: absolute;
+   top: 24%;
+   left: 9%;
+
+   @media (max-width: 425px) {
+      left: 4%;
+   }
+}
+
+.yrk::before {
+   content: url(../images/flag-ukraine.svg);
+   position: absolute;
+   top: 24%;
+   left: 9%;
+
+   @media (max-width: 425px) {
+      left: 4%;
+   }
+}

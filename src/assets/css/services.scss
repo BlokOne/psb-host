@@ -1,0 +1,136 @@
+.services {
+
+   &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+
+   &__wrap {
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 0 29px 0 rgb(68 88 144 / 12%);
+      transition: all 0.3s ease-in-out;
+      border-radius: 8px;
+      z-index: 1;
+      margin-bottom: 48px;
+      width: 24%;
+
+      @media (max-width:768px) and (min-width:320px) {
+         width: 98%;
+      }
+
+      @media (max-width:1024px) and (min-width:769px) {
+         width: 48%;
+      }
+
+   }
+
+   &__wrap:hover {
+      &::before {
+         background: #79c8c2;
+         right: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         border-radius: 0px;
+      }
+
+      color: #fff;
+
+      .services__bxs-tachometer::before {
+         content: url('../images/speed-outline2.svg');
+      }
+
+      .services__bx-world::before {
+         content: url('../images/world-2-fill2.svg');
+      }
+
+      .services__bx-support::before {
+         content: url('../images/support2.svg');
+      }
+
+      .services__bxs-time-five::before {
+         content: url('../images/dmca2.svg');
+      }
+
+      .services__icon {
+         background-color: #fff;
+      }
+   }
+
+   &__wrap::before {
+      content: "";
+      position: absolute;
+      background: #79c8c280;
+      right: -60px;
+      top: -40px;
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      z-index: -1;
+   }
+
+
+   &__bx {
+      width: 36px;
+      height: 36px;
+      line-height: 1;
+      color: #fff;
+      transition: all 0.5s ease-in-out;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+   }
+
+
+   &__title {
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-size: 18px;
+   }
+
+   &__description {
+      font-size: 15px;
+      line-height: 28px;
+      margin-bottom: 0;
+   }
+
+
+   &__bxs-tachometer::before {
+      content: url('../images/speed-outline.svg');
+   }
+
+   &__bx-world::before {
+      content: url('../images/world-2-fill.svg');
+
+   }
+
+   &__bx-support::before {
+      content: url('../images/support.svg');
+
+   }
+
+   &__bxs-time-five::before {
+      content: url('../images/dmca.svg');
+
+   }
+
+   &__icon {
+      margin: 0 auto 20px auto;
+      padding-top: 10px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      background: #79c8c2;
+      position: relative;
+      transition: all 0.5s ease-in-out;
+   }
+
+}

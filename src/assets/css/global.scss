@@ -1,0 +1,107 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: "Raleway", sans-serif;
+   font-feature-settings: 'pnum' on, 'lnum' on;
+   margin-top: 0;
+   margin-bottom: 0.5rem;
+   font-weight: 500;
+   line-height: 1.2;
+}
+
+section {
+   padding: 60px 0;
+   overflow: hidden;
+   scroll-behavior: smooth;
+}
+
+.section-bg {
+   background-color: #f7fbfe;
+}
+
+.section-title {
+   text-align: center;
+   padding-bottom: 30px;
+}
+
+.section-title h2 {
+   font-size: 32px;
+   font-weight: bold;
+   text-transform: uppercase;
+   position: relative;
+   color: #222222;
+
+   @media(max-width: 768px) {
+      font-size: 24px;
+   }
+}
+
+.section-title h2::before,
+.section-title h2::after {
+   content: "";
+   width: 50px;
+   height: 2px;
+   background: #79c8c2;
+   display: inline-block;
+}
+
+.section-title h2::before {
+   margin: 0 15px 10px 0;
+}
+
+.section-title h2::after {
+   margin: 0 0 10px 15px;
+}
+
+.section-title p {
+   margin: 15px 0 0 0;
+}
+
+@media(max-width: 768px) {
+   h3 {
+      font-size: 18px;
+   }
+
+   p,
+   li {
+      font-size: 15px;
+   }
+}
+
+.back-to-top {
+   position: fixed;
+   visibility: hidden;
+   opacity: 0;
+   left: 15px;
+   bottom: 15px;
+   z-index: 996;
+   background: #79c8c2;
+   width: 40px;
+   height: 40px;
+   border-radius: 4px;
+   transition: all 0.4s;
+
+   &::before {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      content: url('../images/arrow.svg');
+   }
+}
+
+.back-to-top.active {
+   visibility: visible;
+   opacity: 1;
+}
+
+.main {
+   min-height: calc(100vh - 52px - 206px);
+}
+
+body {
+   background: #f7f7f8;
+}
